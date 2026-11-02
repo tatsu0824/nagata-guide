@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja"><head><title>永田農園 就業ガイドライン</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><meta charset="utf-8"><style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@700;900&display=swap">
+<style>
+/* Layout: 早見表を先に置き、そのあと「こんなとき」の質問ごとに答える。印刷すると A4 の冊子になる */
+:root{
+  --bg:#f6f7f2; --paper:#ffffff; --ink:#22281f; --muted:#5d6657; --line:#d9ded2;
+  --leaf:#3f6b2f; --leaf-soft:#e6efdf; --soil:#8a5a2b; --warn:#a2470f; --warn-soft:#fbeee2;
+  --f-body:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  --f-head:"Zen Maru Gothic","Zen Kaku Gothic New","Yu Gothic",Meiryo,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161a14; --paper:#1e231b; --ink:#e7ebe2; --muted:#a6ae9f; --line:#353c30;
+  --leaf:#9ccc85; --leaf-soft:#26331f; --soil:#d7a874; --warn:#f0a16a; --warn-soft:#3a2a1d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161a14; --paper:#1e231b; --ink:#e7ebe2; --muted:#a6ae9f; --line:#353c30;
+  --leaf:#9ccc85; --leaf-soft:#26331f; --soil:#d7a874; --warn:#f0a16a; --warn-soft:#3a2a1d; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.8;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-head);text-wrap:balance;line-height:1.35;margin:0}
+p{margin:0}
+.head{display:grid;gap:10px;padding-block:8px 4px;border-bottom:3px solid var(--leaf)}
+.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--leaf);font-weight:700}
+.head h1{font-size:clamp(28px,6vw,40px);font-weight:900}
+.head .sub{color:var(--muted);font-size:15px}
+.draft{display:inline-block;justify-self:start;background:var(--warn-soft);color:var(--warn);font-weight:700;font-size:13px;padding:2px 10px;border-radius:4px}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px}
+nav.toc a{font-size:14px;color:var(--leaf);text-decoration:none;border:1px solid var(--line);background:var(--paper);padding:4px 12px;border-radius:999px}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--leaf);outline:none}
+section{display:grid;gap:14px}
+section>h2{font-size:24px;display:flex;align-items:baseline;gap:10px}
+section>h2 .k{font-size:14px;color:var(--paper);background:var(--leaf);border-radius:4px;padding:0 8px;font-family:var(--f-body)}
+.lead{color:var(--muted)}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:grid;gap:10px;break-inside:avoid}
+.q h3{font-size:18px;color:var(--leaf)}
+.q h3.ask::before{content:"Q. ";color:var(--soil)}
+.q ul,.q ol{margin:0;padding-left:1.3em;display:grid;gap:4px}
+.form{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;background:var(--leaf-soft);border-radius:6px;padding:8px 12px}
+.form b{color:var(--leaf)}
+.chk{font-size:14px;color:var(--warn);background:var(--warn-soft);border-radius:6px;padding:6px 12px}
+.chk::before{content:"要確認 ";font-weight:700}
+.note{font-size:14px;color:var(--muted)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{background:var(--leaf-soft);color:var(--ink);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.two>div{min-width:0}
+figure{margin:0;display:grid;gap:6px}
+figure img{width:100%;max-width:100%;border-radius:6px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted)}
+.bin{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.bin>div{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:var(--paper);display:grid;gap:4px;align-content:start}
+.bin b{font-family:var(--f-head);font-size:16px}
+.bin .burn b{color:var(--warn)} .bin .pla b{color:var(--leaf)} .bin .box b{color:var(--soil)} .bin .home b{color:var(--muted)}
+ol.confirm{margin:0;padding-left:1.4em;display:grid;gap:8px}
+.src{font-size:13px;color:var(--muted);display:grid;gap:4px}
+.src code{font-family:inherit;background:var(--leaf-soft);padding:0 4px;border-radius:3px;word-break:break-all}
+a{color:var(--leaf)}
+@media print{
+  @page{size:A4;margin:14mm 13mm 16mm}
+  body{background:#fff;color:#000;font-size:10.5pt;padding:0}
+  .wrap{max-width:none;gap:6mm}
+  nav.toc{display:none}
+  section{break-before:auto}
+  section.pb{break-before:page}
+  .q{border-color:#bbb;padding:3mm 4mm}
+  .tbl{overflow:visible}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.editbar{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:14px;border:1px dashed var(--line);border-radius:8px;padding:8px 12px;background:var(--paper)}.editbar .en{color:var(--muted);font-size:13px}@media print{.editbar{display:none!important}}
+.mokuji{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 18px;display:grid;gap:10px}.mokuji h2{font-size:18px}.mk{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px 24px}.mk>div{min-width:0}.mk a{text-decoration:none}.mk a:hover,.mk a:focus-visible{text-decoration:underline}.mk .c{font-weight:700;color:var(--leaf)}.mk ul{margin:2px 0 0;padding-left:1.1em;font-size:14px;line-height:1.75}.mk ul a{color:var(--ink)}section,.q{scroll-margin-top:12px}.back{font-size:13px;justify-self:end;text-decoration:none}@media print{.back{display:none}}
+</style>
+</head><body>
+
+
+<div class="wrap">
+<header class="head">
+  <span class="eyebrow" id="gEyebrow"></span>
+  <h1 id="gTitle"></h1>
+  <p class="sub" id="gSub"></p>
+  <span class="draft" id="gDraft"></span>
+</header>
+<div class="editbar" id="editbar" hidden><b>編集する</b><a id="eSheet" target="_blank" rel="noopener">スプレッドシートを開く</a><a id="ePhoto" target="_blank" rel="noopener">写真フォルダを開く</a><span class="en">直したら Claude に「反映して」と伝えてください。この欄は、ページを編集できる人にだけ見えます。</span></div>
+<nav class="mokuji" aria-label="もくじ" id="toc"></nav>
+<div id="main" style="display:grid;gap:28px"><p id="loading" class="lead">読み込んでいます…</p></div>
+</div>
+
+<script>
+const GAS_URL='https://script.google.com/macros/s/AKfycbzNYPqZ2Wp5lfM7FXgSAdBDZEbFgewOytMSqtZSndo53IlQKdPDY14X4paw4gseKX5S/exec';
+let DATA={},PHOTOS={};
+function render(){
+const T=n=>(DATA[n]||[]);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+const KIHON=Object.fromEntries(T('基本').slice(1).map(r=>[r[0],r[1]||'']));
+const $=id=>document.getElementById(id);
+[['gEyebrow','上の小見出し'],['gTitle','タイトル'],['gSub','説明'],['gDraft','版']].forEach(([id,k])=>{$(id).textContent=KIHON[k]||'';$(id).hidden=!KIHON[k]});
+if(KIHON['タイトル'])document.title='永田農園 '+KIHON['タイトル'];
+function table(name){
+  const rows=T(name);if(rows.length<2)return '';
+  const w=Math.max(...rows.map(r=>r.length));
+  const cell=(t,v,i)=>'<'+t+(i===0&&t==='td'?' class="n"':'')+'>'+md(v||'')+'</'+t+'>';
+  return '<div class="tbl"><table><thead><tr>'+Array.from({length:w},(_,i)=>cell('th',rows[0][i],1)).join('')+'</tr></thead><tbody>'+
+    rows.slice(1).map(r=>'<tr>'+Array.from({length:w},(_,i)=>cell('td',r[i],i)).join('')+'</tr>').join('')+'</tbody></table></div>';
+}
+function lines(s){
+  const ls=String(s||'').split(String.fromCharCode(10)).map(x=>x.trim()).filter(Boolean);if(!ls.length)return '';
+  const num=ls.every(x=>/^\d+[.．]/.test(x));
+  const items=ls.map(x=>'<li>'+md(num?x.replace(/^\d+[.．]\s*/,''):x)+'</li>').join('');
+  return num?'<ol>'+items+'</ol>':'<ul>'+items+'</ul>';
+}
+// Q&A のタブ：章ID・質問・本文・書類・表・写真・写真の説明・補足・要確認
+function qcard(r,qid){
+  const [,q,body,form,tab,photo,cap,note,chk]=r;
+  let s='<div class="q" id="'+qid+'">';
+  if(q)s+='<h3'+(/[？?]$/.test(q)?' class="ask"':'')+'>'+esc(q)+'</h3>';
+  s+=lines(body);
+  if(form)s+='<div class="form"><span>'+md(form)+'</span></div>';
+  if(tab)s+=table(tab);
+  if(photo)s+='<figure><img src="'+(PHOTOS[photo]||'')+'" alt="'+esc(cap||q)+'" loading="lazy"><figcaption>'+esc(cap||'')+'</figcaption></figure>';
+  if(note)s+='<p class="note">'+md(note)+'</p>';
+  if(chk)s+='<p class="chk">'+md(chk)+'</p>';
+  return s+'</div>';
+}
+const main=$('main'),toc=[];let html='';
+if(T('早見表').length>1){toc.push(['hayami','早見表']);html+='<section id="hayami"><h2>困ったときの早見表</h2>'+table('早見表')+(KIHON['早見表の注記']?'<p class="note">'+md(KIHON['早見表の注記'])+'</p>':'')+'</section>';}
+T('章').slice(1).filter(r=>r[0]&&r[2]).forEach(([id,no,title,lead])=>{
+  const qs=T('Q&A').slice(1).filter(r=>r[0]===id);
+  const sid=String(id).replace(/[^A-Za-z0-9_-]/g,'_');
+  toc.push([sid,(no?no+'. ':'')+title,qs.map((r,i)=>[sid+'-'+(i+1),r[1]]).filter(x=>x[1])]);
+  html+='<section id="'+sid+'"><h2>'+(no?'<span class="k">'+esc(no)+'</span>':'')+esc(title)+'</h2>'+(lead?'<p class="lead">'+md(lead)+'</p>':'')+qs.map((r,i)=>qcard(r,sid+'-'+(i+1))).join('')+'<a class="back" href="#toc">▲ もくじへ</a></section>';
+});
+if(T('届出書').length>1){toc.push(['forms','届出書の一覧']);html+='<section id="forms" class="pb"><h2>届出書の一覧</h2>'+(KIHON['届出書の注記']?'<p class="lead">'+md(KIHON['届出書の注記'])+'</p>':'')+table('届出書')+'</section>';}
+const kk=T('確認したいこと').slice(1).filter(r=>r[0]||r[1]);
+if(kk.length){toc.push(['kakunin','確認したいこと']);html+='<section id="kakunin"><h2>確認したいこと</h2>'+(KIHON['確認の説明']?'<p class="lead">'+md(KIHON['確認の説明'])+'</p>':'')+'<ol class="confirm">'+kk.map(r=>'<li>'+(r[0]?'<b>'+esc(r[0])+'</b>：':'')+md(r[1]||'')+'</li>').join('')+'</ol></section>';}
+const src=T('出典').slice(1).filter(r=>r[0]);
+if(src.length)html+='<section class="src"><h2 style="font-size:16px">もとにした資料</h2>'+src.map(r=>'<span>'+esc(r[0])+'</span>').join('')+'</section>';
+main.innerHTML=html;
+$('toc').innerHTML='<h2>もくじ</h2><div class="mk">'+toc.map(([id,t,subs])=>'<div><a class="c" href="#'+id+'">'+esc(t)+'</a>'+(subs&&subs.length?'<ul>'+subs.map(([qid,qt])=>'<li><a href="#'+qid+'">'+esc(qt)+'</a></li>').join('')+'</ul>':'')+'</div>').join('')+'</div>';
+}
+fetch(GAS_URL+'?format=json',{credentials:'omit',cache:'no-store'}).then(r=>r.json()).then(g=>{DATA=g.data;PHOTOS=g.photos||{};render()}).catch(e=>{document.getElementById('main').innerHTML='<p class="lead">読み込めませんでした。少し待ってから、ページを開き直してください。</p>';console.error(e)});
+</script>
+
+<script>document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var el=document.getElementById(a.getAttribute('href').slice(1));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}});</script>
+</body></html>
